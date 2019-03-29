@@ -1,0 +1,12 @@
+<!-- <p>
+  features works!
+</p>
+<span>{{parentData}}</span> -->
+
+
+<ul class="list-unstyled" *ngFor="let user of users?.results">
+  <li> {{ user.id.value }} </li>
+  <li> {{ user.name.first }} </li>
+  <li> {{ user.gender }} </li>
+  <li> <img [src]="user.picture.large" alt="" class="rounded img-thumbnail shadow"> </li>
+</ul>

@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-md-3 mt-5">
+    <!-- ngModel -->
+    <input type="text" [(ngModel)]="color" class="form-control" placeholder="Type any word">
+    <p class="breadcrumb mt-1">Text: <q>{{ color }}</q></p>
+    <!-- ngIf -->
+    <div *ngIf="!cols; else colm" class="breadcrumb bg-light border">if Condition Example</div>
+    <ng-template #colm class="breadcrumb">else Condition Example</ng-template>
+    <!-- ngFor -->
+    <section class="bg-light border rounded p-2">
+      <span class="h5 text-primary">For Loop</span>
+      <div *ngFor="let car of cars" class="d-block">
+        <div>{{ car }}</div>
+      </div>
+    </section>
+    <!-- ngSwitch -->
+    <div [ngSwitch]="color" class="bg-dark p-1 text-white text-center">
+      <p>Switch case(bmw, hunda, toktok)</p>
+      <div *ngSwitchCase="'bmw'">bmw!</div>
+      <div *ngSwitchCase="'hunda'">hunda!</div>
+      <div *ngSwitchCase="'toktok'">toktok!</div>
+    </div>
+    <!-- Pips -->
+    <div class="border bg-light p-1 my-1">
+      {{color | uppercase}}
+      {{color | titlecase}}
+      {{"slice" + color | slice:0:3}}
+      {{1.661111 | number: '2.1-2'}}
+      <br>
+      {{1.66 | number: '3.2-5'}}
+    </div>
+  </div>
+  <div class="col-md-3 mt-5 border p-2 rounded">
+    <!-- Interpolation & Class Binding -->
+    <h3 [ngClass]="color">{{sayHello().toUpperCase()}}</h3>
+    <h5 class="{{green}}">{{green.toLowerCase()}}</h5>
+    <!-- Style Binding -->
+    <h5 [style.color]="orange">this color is make by style Property</h5>
+    <!-- Event Binding -->
+    <button (click)="sayHi()" class="btn btn-info btn-sm">click</button>
+    {{orange}}
+  </div>
+</div>

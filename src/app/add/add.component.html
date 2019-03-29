@@ -1,0 +1,24 @@
+<div class="card mt-5 rounded shadow-lg">
+    <div class="card-body">
+      <h5 class="card-title">Add New Item</h5>
+      <form>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Item Name</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="inputEmail3" placeholder="Item Name" name="itemName">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Item Description</label>
+            <div class="col-sm-10">
+              <textarea class="form-control" id="inputPassword3" placeholder="Item Description" name="itemDesc"></textarea>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-12">
+              <button type="submit" class="btn btn-primary btn-block" (click)="addItem()">Add New Item</button>
+            </div>
+          </div>
+      </form>
+    </div>
+</div>

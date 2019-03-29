@@ -1,0 +1,17 @@
+<article class="mt-3">
+  <section class="container">
+    <h3>Fetching Data From API</h3>
+    <table class="table table-hover table-bordered shadow">
+      <thead>
+        <tr>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody (click)="select_user(user)" *ngFor="let user of users?.results">
+        <tr>
+          <td>{{user.name.title + ' ' + user.name.first + ' ' + user.name.last}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</article>
